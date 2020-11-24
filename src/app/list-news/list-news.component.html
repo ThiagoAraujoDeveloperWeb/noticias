@@ -1,0 +1,53 @@
+
+<div class="main">
+  <span style="font-size:30px;cursor:pointer;" #openSidBar class="button-sidbar" (click)="open()">&#9776;</span>
+  <h1>Exibindo resultado de busca por "Covid-19"</h1>
+  <p>Encontramos um total de 20 resultados para a sua busca</p>
+  <ul class="cards">
+    <li class="cards_item" *ngFor="let notice of list;">
+      <div class="card">
+        <div class="card_image"><img src="assets/img/covid-19-img.jpg"></div>
+        <div class="card_content">
+          <h2 class="card_title">{{notice.title}}</h2>
+          <p class="card_text">{{notice.body}}</p>
+          <a href="#">Ler mais</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<aside class="menu">
+  <h4>Categorias</h4>
+  <ul>
+    <li>cacilds vidis litro abertis</li>
+    <li>Eu conheço uma cachacis</li>
+    <li>Praesent lacinia ultrices</li>
+    <li>Praesent lacinia ultrices</li>
+  </ul>
+
+  <div class="search">
+    <h6 style="color: #000;">Procurando por alguma notícia?</h6>
+    <input placeholder="Procurar por...">
+    <span class="fa fa-search"></span>
+  </div>
+</aside>
+
+<!-- SIDEBAR HTML -->
+
+<div id="mySidenav" class="sidenav" #mySidebar>
+  <a href="javascript:void(0)" class="closebtn" (click)="close()">&times;</a>
+
+  <h4>Categorias</h4>
+  <ul>
+    <li>cacilds vidis litro abertis</li>
+    <li>Eu conheço uma cachacis</li>
+    <li>Praesent lacinia ultrices</li>
+    <li>Praesent lacinia ultrices</li>
+<br>
+    <div class="search">
+      <h6 style="color: #000;">Procurando por alguma notícia?</h6>
+      <input placeholder="Procurar por...">
+      <span class="fa fa-search"></span>
+    </div>
+  </ul>
+</div>
