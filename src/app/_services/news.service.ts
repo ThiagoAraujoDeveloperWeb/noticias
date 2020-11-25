@@ -15,6 +15,6 @@ export class NewsService extends BaseService{
   }
 
   resgisterNews(news: any) {
-    return super.post('register_vacancies', news);
+    return super.post('posts', news);
   }
 }

@@ -1,0 +1,33 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<p-card header="Cadastrar novo post" [style]="{width: '90%', margin: '0 auto'}">
+  <br>
+    <div>
+      <h3 class="first">Titulo</h3>
+      <input type="text"
+             label="Titulo"
+             style="width: 80%;"
+             [(ngModel)]="notice.title"
+             pInputText />
+
+      <h3 class="first">Descrição</h3>
+      <p-editor [(ngModel)]="notice.body"
+                [style]="{'height':'420px'}"></p-editor>
+    </div>
+
+    <p-footer>
+        <button pButton
+                type="button"
+                label="Criar"
+                (click)="create()"
+                icon="pi pi-check"
+                style="margin-right: .25em"></button>
+
+        <button pButton
+                type="button"
+                (click)="cancel()"
+                label="Cancelar"
+                icon="pi pi-times"
+                class="ui-button-secondary"></button>
+    </p-footer>
+</p-card>

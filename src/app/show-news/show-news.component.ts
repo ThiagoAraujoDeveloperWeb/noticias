@@ -15,12 +15,8 @@ export class ShowNewsComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
-      // console.log(params)
       this.noticeShow = params;
       console.log(this.noticeShow);
     });
-    // console.log(this.noticeShow);
-
   }
-
 }

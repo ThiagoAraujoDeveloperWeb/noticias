@@ -34,10 +34,12 @@ export class ListNewsComponent implements OnInit {
     });
   }
 
-  seeMore(notice) {
-    this.router.navigate(['/show-news'],
-      { queryParams: notice }
-    );
+  registerNotice() {
+    this.router.navigate(['/register-news']);
+  }
+
+  seeMore(noticeId) {
+    this.router.navigate(['/show-news', noticeId]);
   }
 
   open() {
