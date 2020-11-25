@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { NewsService } from '../_services/news.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-list-news',
@@ -7,11 +8,14 @@ import { NewsService } from '../_services/news.service';
   styleUrls: ['./list-news.component.css']
 })
 export class ListNewsComponent implements OnInit {
-  @ViewChild('mySidebar') mySidebar: ElementRef;
-  @ViewChild('openSidBar') openSidBar: ElementRef;
+  @ViewChild('mySidebar', {static: true}) mySidebar: ElementRef;
+  @ViewChild('openSidBar', {static: true}) openSidBar: ElementRef;
   list = [];
   constructor(
-    public newsSrv: NewsService
+    public newsSrv: NewsService,
+    public activatedRoute: ActivatedRoute,
+    public router: Router
+
   ) { }
 
   ngOnInit() {
@@ -28,6 +32,12 @@ export class ListNewsComponent implements OnInit {
     }).catch(error => {
       console.log('Error:', error)
     });
+  }
+
+  seeMore(notice) {
+    this.router.navigate(['/show-news'],
+      { queryParams: notice }
+    );
   }
 
   open() {

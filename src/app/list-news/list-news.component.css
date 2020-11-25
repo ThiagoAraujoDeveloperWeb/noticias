@@ -112,14 +112,35 @@ img {
   border-radius: 5px;
   box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
 }
+
 .search input {
   padding-right: 32px;
 }
+
 .search .fa-search {
   position: absolute;
   top: 3px;
   right: 10px;
   z-index: 10;
+}
+
+.createPost {padding: 10px 70px;}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.seeMore {
+  text-decoration: none;
+  color: #057f83;
 }
 
 /* Sidebar Styles */

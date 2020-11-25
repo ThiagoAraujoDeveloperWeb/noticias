@@ -10,7 +10,9 @@
         <div class="card_content">
           <h2 class="card_title">{{notice.title}}</h2>
           <p class="card_text">{{notice.body}}</p>
-          <a href="#">Ler mais</a>
+
+          <a routerLink="/show-news"
+             [queryParams]="notice" class="seeMore"><b>Ler mais</b></a>
         </div>
       </div>
     </li>
@@ -23,13 +25,14 @@
     <li>Eu conheço uma cachacis</li>
     <li>Praesent lacinia ultrices</li>
     <li>Praesent lacinia ultrices</li>
+    <div class="search">
+      <h6 style="color: #000;">Procurando por alguma notícia?</h6>
+      <input placeholder="Procurar por...">
+      <span class="fa fa-search"></span>
+    </div>
+    <button class="button createPost">Criar Notícia</button>
   </ul>
 
-  <div class="search">
-    <h6 style="color: #000;">Procurando por alguma notícia?</h6>
-    <input placeholder="Procurar por...">
-    <span class="fa fa-search"></span>
-  </div>
 </aside>
 
 <!-- SIDEBAR HTML -->
